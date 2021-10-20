@@ -6,8 +6,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package mazurkatarzyna
  */
+$menu = wp_get_nav_menu_object('menu-1');
+$header_image = get_field("header_image", $menu);
+
+// var_dump($header_image);
 
 ?>
 <!doctype html>
@@ -22,31 +26,21 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+<div id="page" class="site m-auto lg:mt-12" style="max-width: <?php echo $header_image['width']  ?>px;">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mazurkatarzyna' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header bg-no-repeat bg-contain bg-top p-12"
+						  style="background-image: url(<?php echo $header_image['url'] ?>);
+						  		 min-height: <?php echo $header_image['height']  ?>px;
+						  ">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$_s_description = get_bloginfo( 'description', 'display' );
-			if ( $_s_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $_s_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+				the_custom_logo();
+			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
+		<nav id="site-navigation" class="main-navigation px-4 mt-12">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mazurkatarzyna' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -56,6 +50,23 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+
+		<?php
+
+		if (is_front_page()) {
+			echo '
+			<h1 class="text-7xl font-bold text-center">
+				<span class="uppercase">Twój uśmiech</span>
+				<br />
+				<span class="artistic-font">moja pasja</span>
+			</h1>
+			';
+		}
+
+		?>
+
+
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content p-16">

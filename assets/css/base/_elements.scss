@@ -10,7 +10,6 @@ html {
 	box-sizing: border-box;
 }
 
-
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
@@ -41,13 +40,13 @@ figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
 
-
 /* LINKS */
 a {
 	color: $color__link;
 
 	&:visited {
-		color: $color__link-visited;
+		// color: $color__link-visited;
+		color: currentColor;
 	}
 
 	&:hover,

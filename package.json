@@ -1,5 +1,5 @@
 {
-  "name": "--s--",
+  "name": "mazurkatarzyna",
   "version": "0.0.1",
   "author": "",
   "description": "",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.6.0",
     "@wordpress/eslint-plugin": "^4.1.0",
+    "autoprefixer": "^10.3.7",
     "backstopjs": "^4.5.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
@@ -52,8 +53,8 @@
     "laravel-mix": "^5.0.4",
     "mocha": "^7.1.1",
     "node-wp-i18n": "^1.2.2",
+    "postcss": "^8.3.10",
     "puppeteer": "^2.1.1",
-    "postcss-preset-env": "^6.5.0",
     "replace-in-file": "^5.0.2",
     "rimraf": "^3.0.2",
     "sass": "^1.26.3",
@@ -61,6 +62,10 @@
     "sinon": "^9.0.2",
     "stylelint": "^13.3.0",
     "stylelint-config-wordpress": "^13.1.0",
+    "tailwindcss": "^2.2.17",
     "vue-template-compiler": "^2.5.22"
+  },
+  "dependencies": {
+    "postcss-preset-env": "^6.7.0"
   }
 }

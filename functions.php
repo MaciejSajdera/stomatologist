@@ -1,13 +1,13 @@
 <?php
 /**
- * _s functions and definitions
+ * mazurkatarzyna functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _s
+ * @package mazurkatarzyna
  */
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'mazurkatarzyna_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( '_s_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function _s_setup() {
+	function mazurkatarzyna_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on _s, use a find and replace
-		 * to change '_s' to the name of your theme in all the template files.
+		 * If you're building a theme based on mazurkatarzyna, use a find and replace
+		 * to change 'mazurkatarzyna' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( '_s', get_template_directory() . '/assets/languages' );
+		load_theme_textdomain( 'mazurkatarzyna', get_template_directory() . '/assets/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,7 +45,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', '_s' ),
+				'menu-1' => esc_html__( 'Primary', 'mazurkatarzyna' ),
 			)
 		);
 
@@ -65,16 +65,16 @@ if ( ! function_exists( '_s_setup' ) ) :
 		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'_s_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
+		// add_theme_support(
+		// 	'custom-background',
+		// 	apply_filters(
+		// 		'mazurkatarzyna_custom_background_args',
+		// 		array(
+		// 			'default-color' => 'ffffff',
+		// 			'default-image' => '',
+		// 		)
+		// 	)
+		// );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -95,7 +95,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', '_s_setup' );
+add_action( 'after_setup_theme', 'mazurkatarzyna_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -104,22 +104,22 @@ add_action( 'after_setup_theme', '_s_setup' );
  *
  * @global int $content_width
  */
-function _s_content_width() {
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
+function mazurkatarzyna_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'mazurkatarzyna_content_width', 640 );
 }
-add_action( 'after_setup_theme', '_s_content_width', 0 );
+add_action( 'after_setup_theme', 'mazurkatarzyna_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function _s_widgets_init() {
+function mazurkatarzyna_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', '_s' ),
+			'name'          => esc_html__( 'Sidebar', 'mazurkatarzyna' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', '_s' ),
+			'description'   => esc_html__( 'Add widgets here.', 'mazurkatarzyna' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -127,25 +127,32 @@ function _s_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'mazurkatarzyna_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_template_directory_uri() . '/dist/css/style.css' );
+function mazurkatarzyna_scripts() {
+	wp_enqueue_style( 'mazurkatarzyna-style', get_template_directory_uri() . '/dist/css/style.css' );
+	wp_enqueue_style( 'mazurkatarzyna-style-tailwind', get_template_directory_uri() . '/dist/css/tailwind.css' );
 
 	// Include our dynamic styles.
-	$custom_css = _s_dynamic_styles();
-	wp_add_inline_style( '_s-style', $custom_css );
+	// $custom_css = mazurkatarzyna_dynamic_styles();
+	// wp_add_inline_style( 'mazurkatarzyna-style', $custom_css );
 
-	wp_enqueue_script( '_s-app', get_template_directory_uri() . '/dist/js/main.js', array(), '', true );
+	wp_enqueue_script( 'mazurkatarzyna-app', get_template_directory_uri() . '/dist/js/main.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', 'mazurkatarzyna_scripts' );
+
+function wpb_add_google_fonts() {
+	wp_enqueue_style( 'wpb-google-font1', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap', false );
+	wp_enqueue_style( 'wpb-google-font2', 'https://fonts.googleapis.com/css2?family=Yeseva+One:wght@400;600;800&display=swap', false );
+}
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
 /**
  * Implement the Custom Header feature.
@@ -170,4 +177,4 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Generating dynamic sytles.
  */
-require get_template_directory() . '/inc/dynamic-styles.php';
+// require get_template_directory() . '/inc/dynamic-styles.php';

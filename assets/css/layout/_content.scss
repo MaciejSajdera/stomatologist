@@ -8,6 +8,10 @@
 	margin: 0 0 1.5em;
 }
 
+.site {
+	background-color: $color__page-background-dark;
+}
+
 .byline,
 .updated:not(.published) {
 	display: none;
@@ -44,4 +48,10 @@
 
 .bypostauthor {
 	display: block;
+}
+
+.page-template-home-page-template {
+	h1 {
+		transform: translateY(-20%);
+	}
 }
