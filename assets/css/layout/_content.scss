@@ -10,6 +10,9 @@
 
 .site {
 	background-color: $color__page-background-dark;
+	@media screen and (min-width: 1024px) {
+		max-width: 75%;
+	}
 }
 
 .byline,
@@ -50,8 +53,10 @@
 	display: block;
 }
 
-.page-template-home-page-template {
-	h1 {
-		transform: translateY(-20%);
+section {
+	margin: 0 auto 8rem;
+
+	&:first-of-type {
+		margin-top: 2rem;
 	}
 }

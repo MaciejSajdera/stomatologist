@@ -23,6 +23,8 @@ get_header();
 			// endif;
 
 		endwhile; // End of the loop.
+		
+		get_footer();
 		?>
 
 		</main><!-- #main -->
@@ -30,4 +32,4 @@ get_header();
 
 <?php
 // get_sidebar();
-get_footer();
+

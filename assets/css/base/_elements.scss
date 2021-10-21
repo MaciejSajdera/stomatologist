@@ -18,9 +18,41 @@ blockquote,
 q {
 	quotes: "" "";
 
-	&::before,
-	&::after {
-		content: "";
+	&::before {
+	}
+
+	.blockquote-icons {
+		position: relative;
+
+		&:before,
+		&:after {
+			content: '"';
+			color: $color__text-main;
+			position: absolute;
+			font-size: 6rem;
+			transform: translate(-50%, -50%);
+			height: 1em;
+		}
+
+		&:after {
+			right: 0;
+			transform: translate(50%, -50%);
+		}
+	}
+
+	.blockquote-background {
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $color__main-theme-decoration;
+			top: 1rem;
+			right: 1rem;
+			z-index: -1;
+		}
 	}
 }
 
@@ -99,4 +131,28 @@ dd {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+.image {
+	&--overflowing {
+		@media screen and (min-width: 1280px) {
+			max-width: 150%;
+		}
+	}
+}
+
+.pt-50perc {
+	padding-top: 50%;
+}
+
+.mt-20perc {
+	margin-top: 20%;
+}
+
+.border-decoration-color {
+	border-color: $color__main-theme-decoration;
+}
+
+.decoration-color {
+	color: $color__main-theme-decoration;
 }

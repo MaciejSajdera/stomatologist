@@ -39,3 +39,11 @@ $size__site-sidebar: 25%;
 /* RWD */
 $break__medium: 40.063em;
 $break__large: 64.063em;
+
+/* TRANSITIONS */
+$transition_regular: all 0.3s ease-in-out;
+$transition__button--standard: all 0.2s ease-in-out;
+
+/* ELEMENTS */
+$padding__side-main--desktop: 12.5%;
+$padding__content-box: 2rem;

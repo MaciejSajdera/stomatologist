@@ -1,0 +1,116 @@
+#colophon {
+	padding-top: 2rem;
+	border-top: 2px solid $color__main-theme-decoration;
+}
+
+#footer-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 2rem;
+
+	@media screen and (min-width: 1280px) {
+		justify-content: unset;
+		margin-bottom: 0;
+	}
+}
+
+.footer-menu {
+	width: -webkit-fill-available;
+
+	.menu {
+		justify-content: space-between;
+
+		@media screen and (min-width: 1280px) {
+			margin-right: 25%;
+		}
+
+		li {
+			padding: 0.25em 0.5em;
+			width: fit-content;
+			transition: 0.3s ease-in-out;
+
+			a {
+				transition: inherit;
+			}
+
+			&:hover {
+				background: $color__main-theme-decoration;
+
+				a {
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+.contact-icon {
+	width: 48px;
+	height: 48px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1rem;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	@media screen and (min-width: 992px) {
+		width: 56px;
+		height: 56px;
+	}
+
+	&__phone {
+		// content: url(../dist/svg/phone.svg);
+		padding: 0.75em;
+	}
+
+	&__email {
+		// content: url(../dist/svg/envelope.svg);
+		padding: 0.75em;
+	}
+
+	&__instagram {
+		padding: 0.75em;
+		position: relative;
+
+		&__circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: 90%;
+			width: 90%;
+			background-position: center;
+			margin: auto;
+		}
+
+		&__small-circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: 6px;
+			width: 6px;
+			position: absolute;
+			top: 6px;
+			right: 6px;
+		}
+
+		display: flex;
+	}
+
+	&__facebook {
+		// content: url(../dist/svg/facebook.svg);
+		padding: 0.75em;
+	}
+
+	&__linkedin {
+		// content: url(../dist/svg/linkedin.svg);
+		padding: 0.75em;
+	}
+}
