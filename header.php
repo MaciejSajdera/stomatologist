@@ -120,4 +120,4 @@ $header_image = get_field("header_image", $menu);
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content px-4 lg:px-4 xl:px-32">
+	<div id="content" class="site-content px-8 xl:px-32">

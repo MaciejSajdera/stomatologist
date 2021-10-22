@@ -181,3 +181,52 @@ table {
 .decoration-background {
 	background-color: $color__main-theme-decoration;
 }
+
+.tabs-wrapper {
+	@media screen and (min-width: 992px) {
+		max-width: 75%;
+	}
+
+	.tab {
+		&__content {
+			display: none;
+			background-color: $color__main-theme-decoration--trans;
+			max-width: 92.5%;
+		}
+
+		&__title {
+			background-color: $color__main-theme-decoration;
+		}
+
+		&--active {
+			.tab__title {
+				box-shadow: 0px 15px 10px 0px #000;
+			}
+
+			.expand-arrow {
+				transform: rotate(90deg);
+			}
+
+			.tab__content {
+				display: block;
+			}
+		}
+	}
+}
+
+.expand-arrow {
+	width: 25px;
+	height: 25px;
+	min-width: 25px;
+	background-image: url(../dist/img/arrow-right.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: all 0.2s ease-in-out;
+}
+
+.bg-image {
+	&--75 {
+		background-size: 75%;
+		background-repeat: no-repeat;
+	}
+}
