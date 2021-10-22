@@ -154,6 +154,25 @@ function wpb_add_google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
+
+function my_login_logo_one() { 
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+?> 
+<style type="text/css"> 
+body.login div#login h1 a {
+	background-image: url(<?php echo $image[0]; ?>);
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	padding-bottom: 30px; 
+} 
+</style>
+	<?php 
+}
+add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+
+
 /**
  * Implement the Custom Header feature.
  */

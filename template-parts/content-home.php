@@ -76,9 +76,10 @@ $section_5_content_2 = $section_5['content_2'];
 			<p class="text-center text-2xl mb-16 decoration-color "><?php echo $section_2_title ?></p>
 
 			<div class="flex flex-col lg:flex-row justify-center">
-				<div class="mx-auto max-w-sm mb-24 xl:mb-0">
+
+				<div class="px-8 mx-auto max-w-sm mb-24 xl:w-1/2 xl:mb-0">
 					<div class="text-center">
-						<img class="m-auto mb-12" src="<?php echo $section_2_icon_1['url'] ?>" />
+						<img class="m-auto mb-12 h-20 w-20 object-contain" src="<?php echo $section_2_icon_1['url'] ?>" />
 						<p>
 							<?php
 								echo $section_2_content_1;
@@ -87,9 +88,9 @@ $section_5_content_2 = $section_5['content_2'];
 					</div>
 				</div>
 
-				<div class="m-auto max-w-sm">
+				<div class="px-8 mx-auto max-w-sm xl:w-1/2">
 					<div class="text-center">
-						<img class="m-auto mb-12" src="<?php echo $section_2_icon_2['url'] ?>" />
+						<img class="m-auto mb-12 h-20 w-20 object-contain" src="<?php echo $section_2_icon_2['url'] ?>" />
 						<p>
 							<?php
 								echo $section_2_content_2;
@@ -107,6 +108,8 @@ $section_5_content_2 = $section_5['content_2'];
 				<div class="blockquote-icons">
 					<div class="blockquote-background">
 						<p class="p-8 border-2 border-dashed border-white text-center text-3xl text-black font-extrabold">
+							<span></span>
+							<span></span>
 							<?php echo $section_3_content  ?>
 						</p>
 					</div>

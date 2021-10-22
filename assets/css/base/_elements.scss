@@ -18,25 +18,33 @@ blockquote,
 q {
 	quotes: "" "";
 
-	&::before {
-	}
-
 	.blockquote-icons {
 		position: relative;
+		max-width: 85%;
+		margin: auto;
 
 		&:before,
 		&:after {
-			content: '"';
+			content: "";
 			color: $color__text-main;
 			position: absolute;
 			font-size: 6rem;
-			transform: translate(-50%, -50%);
-			height: 1em;
+
+			width: 94px;
+			height: 61px;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&:before {
+			background-image: url(../dist/img/quotemark-right.png);
+			transform: translate(-100%, -100%);
 		}
 
 		&:after {
+			background-image: url(../dist/img/quotemark-left.png);
 			right: 0;
-			transform: translate(50%, -50%);
+			transform: translate(75%, 25%);
 		}
 	}
 
@@ -54,6 +62,19 @@ q {
 			z-index: -1;
 		}
 	}
+
+	// p {
+	// 	position: relative;
+
+	// 	span {
+	// 		position: absolute;
+
+	// 		&:first-of-type {
+	// 			top: 0;
+	// 			left: 0;
+	// 		}
+	// 	}
+	// }
 }
 
 hr {
@@ -155,4 +176,8 @@ table {
 
 .decoration-color {
 	color: $color__main-theme-decoration;
+}
+
+.decoration-background {
+	background-color: $color__main-theme-decoration;
 }

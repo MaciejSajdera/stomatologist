@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer w-full">
-		<div class="footer-top flex items-center justify-between flex-col xl:flex-row mb-16">
+		<div class="footer-top flex items-center justify-between flex-col xl:flex-row pb-16">
 			<div class="footer-menu">
 				<?php
 					wp_nav_menu(
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 
-		<div class="footer-bottom text-center text-xs mb-16">
+		<div class="footer-bottom text-center text-xs pb-16">
 			<div class="site-info">
 				copyrights - Katarzyna Mazur | <?php echo date("Y"); ?>
 			</div><!-- .site-info -->

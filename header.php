@@ -55,7 +55,7 @@ $header_image = get_field("header_image", $menu);
 			<?php
 				if (is_front_page()) {
 					echo '
-					<h1 class="text-2xl xl:text-5xl 2xl:text-6xl font-bold text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-y-3/4">
+					<h1 class="text-2xl xl:text-5xl 2xl:text-6xl font-bold uppercase text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-y-3/4">
 						<span class="uppercase whitespace-nowrap">Twój uśmiech</span>
 						<br />
 						<span class="artistic-font decoration-color">moja pasja</span>
