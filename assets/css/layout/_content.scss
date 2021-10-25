@@ -20,11 +20,11 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
+// .page-content,
+// .entry-content,
+// .entry-summary {
+// 	margin: 1.5em 0 0;
+// }
 
 .page-links {
 	clear: both;
@@ -57,5 +57,37 @@ section {
 
 	&:first-of-type {
 		margin-top: 2rem;
+	}
+}
+
+.site-content {
+	padding: 0 2rem;
+
+	@media screen and (min-width: 1280px) {
+		padding: 0 8rem;
+	}
+}
+
+.page-template-contact-page-template {
+	.site-content {
+		padding: 0 0;
+
+		@media screen and (min-width: 1280px) {
+			padding: 0 0;
+		}
+	}
+
+	footer {
+		padding: 0 2rem;
+
+		@media screen and (min-width: 1280px) {
+			padding: 0 8rem;
+		}
+	}
+}
+
+.blog {
+	article {
+		margin-bottom: 8rem;
 	}
 }

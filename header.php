@@ -75,7 +75,7 @@ $header_image = get_field("header_image", $menu);
 			</div>
 		</button>
 
-		<div class="site-header__content absolute top-8 left-8">
+		<div class="site-header__content absolute top-8 left-16">
 
 			<div class="site-branding w-1/2 lg:w-auto">
 				<?php
@@ -102,16 +102,20 @@ $header_image = get_field("header_image", $menu);
 
 
 				<div class="mobile-menu-container">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'mobile-menu',
-						'orderby' => 'menu_order',
-						'container'            => 'nav',
-					)
-				);
-				?>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'mobile-menu',
+							'orderby' => 'menu_order',
+							'container'            => 'nav',
+						)
+					);
+					?>
+
+					<div class="social-media flex">
+						<?php get_template_part( 'template-parts/partials/contact-icons'); ?>
+					</div>
 				</div>
 
 			</div><!-- #site-navigation -->
@@ -120,4 +124,4 @@ $header_image = get_field("header_image", $menu);
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content px-8 xl:px-32">
+	<div id="content" class="site-content">

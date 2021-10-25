@@ -115,7 +115,9 @@
 				transition: 0.3s ease-in-out;
 
 				a {
+					color: #fff;
 					transition: inherit;
+					font-weight: 600;
 				}
 
 				&:hover {
@@ -335,16 +337,18 @@ $mobile-menu-padding-top: 10rem;
 	top: 0;
 	left: 0;
 	padding-top: $mobile-menu-padding-top;
+	padding-bottom: 4rem;
 	min-height: 100vh;
 	height: 100%;
 	height: -webkit-fill-available;
 	overflow: scroll;
 	width: 100%;
-	background: $color__background-body;
+	background-color: $color__page-background-dark;
 	transform: translateX(-200%);
 	transition: all 0.5s ease-in-out;
 	display: flex;
 	flex-flow: column;
+	justify-content: space-between;
 	z-index: 999;
 
 	@media screen and (min-width: 992px) {
@@ -357,7 +361,7 @@ $mobile-menu-padding-top: 10rem;
 		width: 100%;
 		display: flex;
 		align-items: center;
-		border-bottom: 1px solid #efefef;
+		// border-bottom: 1px solid #efefef;
 		order: 1;
 
 		.menu-thumbnail-image {
@@ -367,7 +371,16 @@ $mobile-menu-padding-top: 10rem;
 		a {
 			display: flex;
 			justify-content: space-between;
-			border-right: 1px solid #efefef;
+			// border-right: 1px solid #efefef;
+			transition: all 0.3s ease-in;
+			width: 100%;
+			justify-content: space-between;
+			padding: 1em 1.5em;
+
+			&:hover {
+				background: $color__main-theme-decoration;
+				color: #000;
+			}
 		}
 
 		.sub-menu {
@@ -387,13 +400,6 @@ $mobile-menu-padding-top: 10rem;
 			display: flex;
 			flex-flow: column;
 		}
-	}
-
-	a {
-		transition: height 0.3s ease-in;
-		width: 100%;
-		justify-content: space-between;
-		padding: 1em 1.5em;
 	}
 
 	.expand-menu-toggle {

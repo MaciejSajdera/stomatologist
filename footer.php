@@ -11,7 +11,7 @@
 
 ?>
 
-	</div><!-- #content -->
+
 
 	<footer id="colophon" class="site-footer w-full">
 		<div class="footer-top flex items-center justify-between flex-col xl:flex-row pb-16">
@@ -39,6 +39,7 @@
 		</div>
 
 	</footer><!-- #colophon -->
+	</div><!-- #content -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
