@@ -13,9 +13,9 @@
 	<header class="entry-header mb-8">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title decoration-color font-bold mb-4">', '</h1>' );
+			the_title( '<h1 class="entry-title decoration-color text--600 font-bold mb-4">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title decoration-color font-bold mb-4"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title decoration-color text--600 font-bold mb-4"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -45,7 +45,7 @@
 				the_excerpt();
 				?>
 
-				<a class="decoration-color underline mt-4" href="<?php echo get_permalink(); ?>">Czytaj dalej </a>
+				<a class="decoration-color mt-4 readmore" href="<?php echo get_permalink(); ?>">Czytaj dalej </a>
 
 			</div><!-- .entry-content -->
 

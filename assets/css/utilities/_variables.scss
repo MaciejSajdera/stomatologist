@@ -29,6 +29,20 @@ $color__main-theme-decoration--trans: #bf943eab;
 // $font__main: "Montserrat";
 // $font__quote: "Yeseva One";
 
+:root {
+	--fs-400: 1rem;
+	--fs-600: clamp(1.25rem, 1.5vw + 1rem, 2.25rem);
+	--fs-800: clamp(1.5rem, 1.75vw + 1rem, 2.25rem);
+	--fs-1200: clamp(2rem, 3vw + 1rem, 4.5rem);
+}
+
+@media (min-width: 40em) {
+	// :root {
+	// 	--fs-600: 3rem;
+	// 	--fs-400: 1.125rem;
+	// }
+}
+
 $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;
 $font__line-height-body: 1.5;

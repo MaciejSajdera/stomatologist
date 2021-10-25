@@ -15,8 +15,8 @@ $section_1_link = $section_1['link'];
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title text-center text-2xl xl:text-5xl 2xl:text-6xl font-bold uppercase mb-24">', '</h1>' ); ?>
+	<header class="entry-header reveal-from__trigger">
+		<?php the_title( '<h1 class="entry-title text-center text--1200 font-bold uppercase mb-24 reveal-from__element reveal-from--transparent">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content ">
@@ -32,10 +32,14 @@ $section_1_link = $section_1['link'];
 				</div>
 
 			</div>
+			
+			<div class="reveal-from__trigger">
 
-			<h2 class="text-center text-2xl mb-16 decoration-color "><?php echo $section_1_title ?></h2>
+				<h2 class="text-center text-2xl mb-16 decoration-color "><?php echo $section_1_title ?></h2>
 
-			<a href="<?php echo $section_1_link ?>" class="button button--standard"> <img src="<?php echo $section_1_icon['url'] ?>" /> </a>
+				<a href="<?php echo $section_1_link ?>" target="_blank" class="button button--standard reveal-from__element reveal-from--bottom"> <img src="<?php echo $section_1_icon['url'] ?>" /> </a>
+
+			</div>
 
 		</section>
 

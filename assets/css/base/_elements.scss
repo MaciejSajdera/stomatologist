@@ -1,9 +1,11 @@
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
 *,
 *::before,
 *::after {
 	box-sizing: inherit;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 html {
@@ -12,6 +14,10 @@ html {
 
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
+}
+
+#page-wrapper {
+	overflow: hidden;
 }
 
 blockquote,
@@ -30,10 +36,20 @@ q {
 			position: absolute;
 			font-size: 6rem;
 
-			width: 94px;
-			height: 61px;
+			width: 48px;
+			height: 28px;
 			background-repeat: no-repeat;
 			background-size: contain;
+
+			@media screen and (min-width: 640px) {
+				width: 60px;
+				height: 40px;
+			}
+
+			@media screen and (min-width: 1280px) {
+				width: 94px;
+				height: 61px;
+			}
 		}
 
 		&:before {
@@ -44,7 +60,7 @@ q {
 		&:after {
 			background-image: url(../dist/img/quotemark-left.png);
 			right: 0;
-			transform: translate(75%, 25%);
+			transform: translate(90%, 25%);
 		}
 	}
 
@@ -100,11 +116,11 @@ a {
 	&:visited,
 	&:focus,
 	&:active {
-		color: $color__link-visited;
+		color: $color__link;
 	}
 
 	&:hover {
-		color: $color__link-hover;
+		color: $color__link;
 	}
 
 	&:focus {
@@ -155,7 +171,12 @@ table {
 
 .image {
 	&--overflowing {
+		max-width: 100%;
+		width: 100%;
+		object-fit: cover;
+
 		@media screen and (min-width: 1280px) {
+			width: auto;
 			max-width: 150%;
 		}
 	}
@@ -215,6 +236,21 @@ table {
 
 .social-media {
 	margin: 0 auto;
+
+	a {
+		transition: 0.3s ease-in-out;
+		svg {
+			transition: 0.3s ease-in-out;
+		}
+
+		&:hover {
+			border-color: $color__main-theme-decoration;
+
+			svg {
+				fill: $color__main-theme-decoration;
+			}
+		}
+	}
 }
 
 .expand-arrow {
@@ -263,4 +299,227 @@ table {
 	@media screen and (min-width: 1280px) {
 		padding: 3rem 4rem;
 	}
+}
+
+.text {
+	&--600 {
+		font-size: var(--fs-600);
+		line-height: 2rem;
+	}
+
+	&--800 {
+		font-size: var(--fs-800);
+		line-height: 2.25rem;
+	}
+
+	&--1200 {
+		font-size: var(--fs-1200);
+		line-height: 1;
+	}
+}
+
+.reveal-from {
+	&__element {
+		// transition: all 0.5s linear;
+		opacity: 0;
+	}
+
+	&--left {
+		transform: translate(-100%, 0%);
+	}
+
+	&--right {
+		transform: translate(100%, 0%);
+	}
+
+	&--bottom {
+		transform: translate(0%, 100%);
+	}
+
+	&--transparent {
+		opacity: 0;
+	}
+
+	&--transparent-with-delay {
+		opacity: 0;
+	}
+}
+
+.revealed {
+	.reveal-from {
+		&--left {
+			animation: revealFromLeft 1s ease forwards;
+		}
+
+		&--right {
+			animation: revealFromRight 1s ease forwards;
+		}
+
+		&--bottom {
+			animation: revealFromBottom 1s ease forwards;
+		}
+
+		&--transparent {
+			animation: revealFromTransparent 1s ease forwards;
+		}
+
+		&--transparent-with-delay {
+			animation: revealFromTransparent 1s ease 0.75s forwards;
+		}
+	}
+}
+
+@keyframes revealFromLeft {
+	0% {
+		transform: translate(-100%, 0%);
+		opacity: 0;
+	}
+
+	90% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+}
+
+@keyframes revealFromRight {
+	0% {
+		transform: translate(100%, 0%);
+		opacity: 0;
+	}
+
+	90% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+}
+
+@keyframes revealFromBottom {
+	0% {
+		transform: translate(0%, 100%);
+		opacity: 0;
+	}
+
+	90% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+}
+
+@keyframes revealFromTransparent {
+	0% {
+		opacity: 0;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.readmore {
+	position: relative;
+	width: fit-content;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		left: 0;
+		bottom: -0.25rem;
+		background-color: $color__main-theme-decoration;
+		transition: 0.3s ease-in-out;
+	}
+
+	&:hover {
+		color: $color__main-theme-decoration;
+
+		&::after {
+			width: 0;
+		}
+	}
+}
+
+.site {
+	opacity: 0;
+	transition: all 0.3s ease-in;
+}
+
+.page-loaded {
+	opacity: 1 !important;
+}
+
+.my-preloader {
+	height: 100vh;
+	position: fixed;
+	width: 100vw;
+	background: $color__background-body;
+	z-index: 99999;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	// transition: all 0.3s ease-in;
+	opacity: 1;
+
+	.preloader-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 10em;
+		width: 10em;
+		animation: myPreloaderMove 1.5s infinite;
+		position: absolute;
+		background-position: center;
+		// left: 50%;
+		// top: 50%;
+		// transform: translate(-50%, -50%);
+
+		img {
+			object-fit: contain;
+		}
+	}
+}
+
+@keyframes myPreloaderMove {
+	0% {
+		transform: scale(1.1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.1);
+		opacity: 0;
+	}
+}
+
+.my-preloader-off {
+	opacity: 0;
+}
+
+.my-preloader-none {
+	display: none;
 }

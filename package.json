@@ -66,6 +66,7 @@
     "vue-template-compiler": "^2.5.22"
   },
   "dependencies": {
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

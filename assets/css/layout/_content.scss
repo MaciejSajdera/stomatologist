@@ -49,7 +49,7 @@
 }
 
 section {
-	margin: 0 auto 3rem;
+	margin: 0 auto 6rem;
 
 	@media screen and (min-width: 992px) {
 		margin: 0 auto 8rem;
@@ -61,7 +61,11 @@ section {
 }
 
 .site-content {
-	padding: 0 2rem;
+	padding: 0 1.5rem;
+
+	@media screen and (min-width: 414px) {
+		padding: 0 2rem;
+	}
 
 	@media screen and (min-width: 1280px) {
 		padding: 0 8rem;
@@ -89,5 +93,99 @@ section {
 .blog {
 	article {
 		margin-bottom: 8rem;
+
+		img {
+			@media screen and (max-width: 1279px) {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+}
+
+.single {
+	h1 {
+		margin-bottom: 0;
+	}
+
+	header {
+		margin-bottom: 4rem;
+	}
+
+	.post-thumbnail {
+		margin-bottom: 4rem;
+		margin: auto;
+	}
+
+	.post-navigation {
+		margin: 4rem 0;
+
+		span {
+			font-size: 0.75rem;
+			margin-bottom: 0.5rem;
+		}
+
+		a {
+			color: $color__main-theme-decoration;
+		}
+	}
+
+	.blog-post-container {
+		align-items: flex-start !important;
+
+		@media screen and (max-width: 1280px) {
+			flex-flow: column !important;
+		}
+
+		.post-thumbnail {
+			width: 60%;
+			padding-top: 0;
+			float: right;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+
+			@media screen and (max-width: 1280px) {
+				width: 100%;
+				margin: auto 0 2em;
+				order: 1;
+			}
+
+			@media screen and (min-width: 1280px) {
+				padding: 0em 0 3em 3em;
+				align-items: flex-start;
+			}
+
+			img {
+				margin: auto;
+			}
+		}
+
+		.post-content {
+			width: 100%;
+			text-align: left;
+
+			// @include fluid-type($min_width, $max_width, 20px, 22px);
+
+			@media screen and (max-width: 1280px) {
+				order: 2;
+			}
+
+			p:first-letter {
+				font-size: 5em;
+				color: $color__main-theme-decoration;
+				font-weight: 300;
+				float: left;
+				line-height: 0.65;
+				margin: 0.1em 0.1em 0.1em 0;
+			}
+
+			.itemIntroText {
+				p {
+					margin-top: 0;
+					text-indent: 1em;
+				}
+			}
+		}
 	}
 }

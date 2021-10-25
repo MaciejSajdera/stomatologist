@@ -38,7 +38,7 @@ $section_1_contact_info_3 = $section_1_contact_info['info_3'];
 
 				<div class="contact-info__location mb-8">
 					<p class="text-white uppercase font-bold mb-8"><?php echo $section_1_contact_info_1['title'] ?></p>
-					<p class="text-black mb-8"><?php echo $section_1_contact_info_1['data_1'] ?></p>
+					<p class="text-black mb-4"><?php echo $section_1_contact_info_1['data_1'] ?></p>
 					<p class="text-black mb-8"><?php echo $section_1_contact_info_1['data_2'] ?></p>
 				</div>
 

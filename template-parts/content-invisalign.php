@@ -59,8 +59,8 @@ $section_4_image = $section_4['image'];
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title text-center text-2xl xl:text-5xl 2xl:text-6xl font-bold uppercase mb-24">', '</h1>' ); ?>
+	<header class="entry-header reveal-from__trigger">
+		<?php the_title( '<h1 class="entry-title text-center text--1200 font-bold uppercase mb-24 reveal-from__element reveal-from--transparent">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content ">
@@ -77,8 +77,8 @@ $section_4_image = $section_4['image'];
 			</h2>
 
 
-			<div class="mb-16 max-w-screen-sm m-auto">
-				<img class="object-contain px-12 xl:px-36" src="<?php echo $section_1_image['url'] ?>">
+			<div class="mb-16 max-w-screen-sm m-auto reveal-from__trigger">
+				<img class="object-contain px-12 xl:px-36 reveal-from__element reveal-from--bottom" src="<?php echo $section_1_image['url'] ?>">
 			</div>
 
 			<div class="text-center max-w-lg">
@@ -89,7 +89,7 @@ $section_4_image = $section_4['image'];
 					?>
 				</div>
 
-				<img class="m-auto mb-8 max-w-xs" src="<?php echo $section_1_icon['url'] ?>">
+				<img class="m-auto mb-8 max-w-xs p-8" src="<?php echo $section_1_icon['url'] ?>">
 
 			</div>
 
@@ -102,7 +102,7 @@ $section_4_image = $section_4['image'];
 			<div class="pb-12 xl:hidden xl:py-12">
 
 				<div class="text-center text-2xl text-black w-full transform xl:translate-x-1/4 mb-12">
-					<p class="m-auto py-4 px-4 decoration-background font-bold"><?php echo $section_2_title ?></p>
+					<p class="text--600 m-auto py-4 px-4 decoration-background font-bold"><?php echo $section_2_title ?></p>
 				</div>
 
 				<p class="text-justify mb-12">
@@ -115,7 +115,7 @@ $section_4_image = $section_4['image'];
 
 			<!-- Desktop only -->
 
-			<div class="hidden pb-12 xl:block mb-24 py-12 bg-image--75"
+			<div class="hidden pb-12 xl:block mb-24 py-12 bg-image--75 reveal-from__trigger"
 			
 				style="
 					background-image: url(<?php echo $section_2_image_1['url'] ?>);
@@ -123,7 +123,7 @@ $section_4_image = $section_4['image'];
 					>
 
 				<div class="text-center text-2xl text-black w-full transform xl:translate-x-1/4 mb-24">
-					<p class="m-auto py-4 px-4 decoration-background font-bold xl:px-8 xl:w-max"><?php echo $section_2_title ?></p>
+					<p class="m-auto py-4 px-4 decoration-background font-bold xl:px-8 xl:w-max reveal-from__element reveal-from--right"><?php echo $section_2_title ?></p>
 				</div>
 
 				<p class="text-justify px-16 xl:w-1/2 xl:ml-auto">
@@ -132,7 +132,7 @@ $section_4_image = $section_4['image'];
 
 			</div>
 
-			<div class="xl:flex xl:flex-row xl:justify-between">
+			<div class="xl:flex xl:flex-row xl:justify-between reveal-from__trigger">
 
 				<div class="xl:w-1/2">
 					<div class="text-justify">
@@ -146,7 +146,7 @@ $section_4_image = $section_4['image'];
 				</div>
 				
 				<div class="max-w-lg m-auto xl:mt-0 xl:w-1/2 xl:order-2 p-16">
-					<div class="m-auto bg-cover bg-no-repeat rounded-full w-full h-auto"
+					<div class="m-auto bg-cover bg-no-repeat rounded-full w-full h-auto reveal-from__element reveal-from--bottom"
 					 	style="padding-top:100%; background-image: url(<?php echo $section_2_image_2['url'] ?>)">
 					</div>
 				</div>
@@ -170,7 +170,7 @@ $section_4_image = $section_4['image'];
 
 			</div>
 
-			<div class="flex flex-col xl:flex-row justify-between items-stretch">
+			<div class="flex flex-col xl:flex-row justify-between items-stretch reveal-children__trigger">
 
 				<div class="flex flex-col items-center mb-12 px-8 xl:mb-0 xl:w-4/12">
 					<img class="mb-6 w-20 h-20 object-contain" src="<?php echo $section_3_benefit_1_icon['url'] ?>" />
@@ -260,7 +260,11 @@ $section_4_image = $section_4['image'];
 					</div>
 				</div>
 
-				<img class="px-12 m-auto mt-24" src="<?php echo $section_4_image['url'] ?>" />
+				<div class="reveal-from__trigger">
+
+					<img class="px-12 m-auto mt-24 reveal-from__element reveal-from--right" src="<?php echo $section_4_image['url'] ?>" />
+
+				</div>
 
 			</div>
 

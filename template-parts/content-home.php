@@ -48,14 +48,14 @@ $section_5_content_2 = $section_5['content_2'];
 
 	<div class="entry-content ">
 
-		<section class="flex items-center justify-between flex-col xl:flex-row w-full">
+		<section class="flex items-center justify-between flex-col gap-y-12 xl:flex-row xl:gap-x-12 w-full">
 
 			<div class="text-center max-w-lg xl:w-2/3 xl:order-2">
 
 				<img class="m-auto mb-8" src="<?php echo $section_1_icon['url'] ?>">
 
-				<h2 class="mb-4 decoration-color"> <?php echo $section_1_title ?> </h2>
-				<h3 class="mb-12 decoration-color"><?php echo $section_1_header ?> </h3>
+				<p class="mb-4 decoration-color"> <?php echo $section_1_title ?> </p>
+				<h2 class="mb-12 decoration-color text--600 font-bold"><?php echo $section_1_header ?> </h2>
 				<div class="text-left">
 					<?php
 						the_content();
@@ -72,10 +72,10 @@ $section_5_content_2 = $section_5['content_2'];
 		</section>
 
 
-		<section>
+		<section class="reveal-from__trigger">
 			<p class="text-center text-2xl mb-16 decoration-color "><?php echo $section_2_title ?></p>
 
-			<div class="flex flex-col lg:flex-row justify-center">
+			<div class="flex flex-col lg:flex-row justify-center reveal-from__element reveal-from--bottom">
 
 				<div class="px-8 mx-auto max-w-sm mb-24 xl:w-1/2 xl:mb-0">
 					<div class="text-center">
@@ -103,11 +103,11 @@ $section_5_content_2 = $section_5['content_2'];
 		</section>
 
 
-		<section>
+		<section class="quote my-36 xl:my-40">
 			<blockquote class="p-4 quote">
 				<div class="blockquote-icons">
 					<div class="blockquote-background">
-						<p class="p-8 border-2 border-dashed border-white text-center text-3xl text-black font-extrabold">
+						<p class="p-8 border-2 border-dashed border-white text-center text--800 text-black font-extrabold">
 							<span></span>
 							<span></span>
 							<?php echo $section_3_content  ?>
@@ -118,35 +118,33 @@ $section_5_content_2 = $section_5['content_2'];
 		</section>
 
 		<section>
-			<div class="mb-36 flex flex-col xl:flex-row">
+			<div class="flex mb-16 flex-col xl:flex-row xl:mb-36 reveal-from__trigger">
 
 				<div class="mt-auto mb-16 xl:w-7/12">
-					<img class="mb-8 xl:ml-auto pr-6" src="<?php echo $section_4_subsection_1_logo['url'] ?>" alt="<?php echo $section_4_subsection_1_logo['alt'] ?>" />
-					<p class="border-2 border-decoration-color py-4 px-8">
+					<img class="mb-8 m-auto xl:mr-0 xl:ml-auto xl:pr-6" src="<?php echo $section_4_subsection_1_logo['url'] ?>" alt="<?php echo $section_4_subsection_1_logo['alt'] ?>" />
+					<div class="border-2 border-decoration-color py-4 px-8">
 						<?php echo $section_4_subsection_1_content ?>
-					</p>
+					</div>
 				</div>
 
 				<div class="xl:w-5/12 relative">
-					<img class="image--overflowing" src="<?php echo $section_4_subsection_1_image['url'] ?>" alt="<?php echo $section_4_subsection_1_image['alt'] ?>" />
+					<img class="image--overflowing reveal-from__element reveal-from--right" src="<?php echo $section_4_subsection_1_image['url'] ?>" alt="<?php echo $section_4_subsection_1_image['alt'] ?>" />
 				</div>
 
 
 			</div>
 
-			<div class="mb-36 flex flex-col xl:flex-row">
+			<div class="mb-36 flex flex-col xl:flex-row reveal-from__trigger">
 
-				<div class="xl:w-5/12 relative flex flex-row-reverse">
-					<img class="image--overflowing" src="<?php echo $section_4_subsection_2_image['url'] ?>" alt="<?php echo $section_4_subsection_2_image['alt'] ?>" />
-				</div>
-
-				<div class="mt-auto mb-16 xl:w-7/12">
-					<img class="mb-8 xl:ml-auto pr-6" src="<?php echo $section_4_subsection_2_logo['url'] ?>" alt="<?php echo $section_4_subsection_2_logo['alt'] ?>" />
-					<p class="border-2 border-decoration-color py-4 px-8">
+				<div class="mt-auto mb-16 xl:order-2 xl:w-7/12">
+					<div class="border-2 border-decoration-color py-4 px-8">
 						<?php echo $section_4_subsection_2_content ?>
-					</p>
+					</div>
 				</div>
 
+				<div class="relative flex flex-row-reverse xl:order-1 xl:w-5/12 ">
+					<img class="image--overflowing reveal-from__element reveal-from--left" src="<?php echo $section_4_subsection_2_image['url'] ?>" alt="<?php echo $section_4_subsection_2_image['alt'] ?>" />
+				</div>
 
 
 			</div>
@@ -155,34 +153,38 @@ $section_5_content_2 = $section_5['content_2'];
 
 		<section>
 
-			<div class="relative flex flex-col justify-between items-center xl:flex-row">
+			<div class="reveal-from__trigger">
 
-				<div class="mb-12 xl:mb-0 xl:w-5/12 xl:order-2">
-					<img src="<?php echo $section_5_image['url'] ?>" />
-				</div>
+				<div class="relative flex flex-col justify-between items-center xl:flex-row reveal-from__element reveal-from--bottom">
 
-				<div class="flex flex-col justify-between mb-6 xl:mb-0 xl:w-3/12 xl:order-1">
-
-					<div class="h-full flex flex-col">
-						<p class="text-center">
-							<?php echo $section_5_content_1?>
-						</p>
-			
-						<!-- <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full h-fullmx-auto mt-auto" src="<?php echo $section_5_icon_1['url'] ?>" /> -->
+					<div class="mb-12 xl:mb-0 xl:w-5/12 xl:order-2">
+						<img src="<?php echo $section_5_image['url'] ?>" />
 					</div>
 
-				</div>
+					<div class="flex flex-col justify-between mb-6 xl:mb-0 xl:w-3/12 xl:order-1">
 
-				<div class=" flex flex-col justify-between mb-6 xl:mb-0 xl:w-3/12 xl:order-3">
+						<div class="h-full flex flex-col">
+							<p class="text-center">
+								<?php echo $section_5_content_1?>
+							</p>
+				
+							<!-- <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full h-fullmx-auto mt-auto" src="<?php echo $section_5_icon_1['url'] ?>" /> -->
+						</div>
 
-					<div class="h-full flex flex-col">
-						<p class="text-center">
-							<?php echo $section_5_content_2?>
-						</p>
-			
-						<!-- <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full mx-auto mt-auto" src="<?php echo $section_5_icon_2['url'] ?>" /> -->
 					</div>
 
+					<div class=" flex flex-col justify-between mb-6 xl:mb-0 xl:w-3/12 xl:order-3">
+
+						<div class="h-full flex flex-col">
+							<p class="text-center">
+								<?php echo $section_5_content_2?>
+							</p>
+				
+							<!-- <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full mx-auto mt-auto" src="<?php echo $section_5_icon_2['url'] ?>" /> -->
+						</div>
+
+
+					</div>
 
 				</div>
 

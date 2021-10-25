@@ -17,14 +17,28 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content', 'single' );
+			?>
 
-			the_post_navigation();
+				<div class="post-navigation">
+
+				<div>
+				<?php previous_post_link('%link', '<span class="post-navigation__prev">Poprzedni</span> <p>%title</p>'); ?>
+				</div>
+
+				<div>
+
+				<?php next_post_link('%link', '<span class="post-navigation__next">Następny</span> <p>%title</p>'); ?>
+				</div>
+
+				</div>
+
+			<?php
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			// if ( comments_open() || get_comments_number() ) :
+			// 	comments_template();
+			// endif;
 
 		endwhile; // End of the loop.
 		?>
@@ -33,5 +47,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

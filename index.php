@@ -24,7 +24,7 @@ get_header();
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header class="entry-header">
-					<?php single_post_title( '<h1 class="entry-title text-center text-2xl xl:text-5xl 2xl:text-6xl font-bold uppercase mb-24">', '</h1>' ); ?>
+					<?php single_post_title( '<h1 class="entry-title text-center text--1200 font-bold uppercase mb-24">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 				<?php
 			endif;

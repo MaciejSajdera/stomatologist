@@ -1,4 +1,7 @@
 #colophon {
+}
+
+.footer-top {
 	padding-top: 2rem;
 	border-top: 2px solid $color__main-theme-decoration;
 }
@@ -6,11 +9,12 @@
 #footer-menu {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	// justify-content: center;
 	margin-bottom: 2rem;
+	column-gap: 1rem;
 
 	@media screen and (min-width: 1280px) {
-		justify-content: unset;
+		// justify-content: unset;
 		margin-bottom: 0;
 	}
 }
@@ -19,10 +23,10 @@
 	width: -webkit-fill-available;
 
 	.menu {
-		justify-content: space-between;
+		// justify-content: space-between;
 
 		@media screen and (min-width: 1280px) {
-			margin-right: 25%;
+			margin-right: 4rem;
 		}
 
 		li {
@@ -32,6 +36,7 @@
 
 			a {
 				transition: inherit;
+				color: #fff;
 			}
 
 			&:hover {
@@ -40,6 +45,14 @@
 				a {
 					color: black;
 				}
+			}
+		}
+
+		li.current_page_item {
+			background: $color__main-theme-decoration;
+
+			a {
+				color: #000;
 			}
 		}
 	}
