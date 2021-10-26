@@ -20,6 +20,10 @@ body {
 	overflow: hidden;
 }
 
+::selection {
+	background-color: $color__main-theme-decoration--trans;
+}
+
 blockquote,
 q {
 	quotes: "" "";
@@ -210,7 +214,7 @@ table {
 	.tab {
 		&__content {
 			display: none;
-			background-color: $color__main-theme-decoration--trans;
+			background-color: $color__main-theme-decoration--semitrans;
 			max-width: 92.5%;
 		}
 
@@ -299,22 +303,9 @@ table {
 	@media screen and (min-width: 1280px) {
 		padding: 3rem 4rem;
 	}
-}
 
-.text {
-	&--600 {
-		font-size: var(--fs-600);
-		line-height: 2rem;
-	}
-
-	&--800 {
-		font-size: var(--fs-800);
-		line-height: 2.25rem;
-	}
-
-	&--1200 {
-		font-size: var(--fs-1200);
-		line-height: 1;
+	a:hover {
+		color: #000;
 	}
 }
 
@@ -325,15 +316,15 @@ table {
 	}
 
 	&--left {
-		transform: translate(-100%, 0%);
+		transform: translate(-25%, 0%);
 	}
 
 	&--right {
-		transform: translate(100%, 0%);
+		transform: translate(25%, 0%);
 	}
 
 	&--bottom {
-		transform: translate(0%, 100%);
+		transform: translate(0%, 25%);
 	}
 
 	&--transparent {
@@ -371,7 +362,7 @@ table {
 
 @keyframes revealFromLeft {
 	0% {
-		transform: translate(-100%, 0%);
+		transform: translate(-25%, 0%);
 		opacity: 0;
 	}
 
@@ -388,7 +379,7 @@ table {
 
 @keyframes revealFromRight {
 	0% {
-		transform: translate(100%, 0%);
+		transform: translate(25%, 0%);
 		opacity: 0;
 	}
 
@@ -405,7 +396,7 @@ table {
 
 @keyframes revealFromBottom {
 	0% {
-		transform: translate(0%, 100%);
+		transform: translate(0%, 25%);
 		opacity: 0;
 	}
 

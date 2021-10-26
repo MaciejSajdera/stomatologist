@@ -30,29 +30,28 @@
 		}
 
 		li {
-			padding: 0.25em 0.5em;
 			width: fit-content;
-			transition: 0.3s ease-in-out;
+			margin-bottom: 1rem;
 
 			a {
-				transition: inherit;
 				color: #fff;
+				transition: 0.3s ease-in-out;
+				// font-weight: 600;
+				padding: 0.25em 0.5em;
 			}
 
 			&:hover {
-				background: $color__main-theme-decoration;
-
 				a {
+					background: $color__main-theme-decoration;
 					color: black;
 				}
 			}
 		}
 
 		li.current_page_item {
-			background: $color__main-theme-decoration;
-
 			a {
 				color: #000;
+				background: $color__main-theme-decoration;
 			}
 		}
 	}

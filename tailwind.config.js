@@ -1,6 +1,9 @@
 module.exports = {
-	// mode: "jit",
-	purge: ["./**/*.php", "dist/**/*"],
+	mode: "jit",
+	purge: {
+		enabled: true,
+		content: ["./*.php", "./**/*.php"]
+	},
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {},

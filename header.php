@@ -64,10 +64,9 @@ $header_image = get_field("header_image", $menu);
 				<?php
 					if (is_front_page()) {
 						echo '
-						<h1 class="text--1200 font-bold uppercase text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:-translate-y-3/4 reveal-from__trigger">
-							<span class="uppercase whitespace-nowrap reveal-from__element reveal-from--transparent">Twój uśmiech</span>
-							<br />
-							<span class="artistic-font decoration-color reveal-from__element reveal-from--transparent-with-delay">moja pasja</span>
+						<h1 class="text--1200 text-center absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:-translate-y-2/4 reveal-from__trigger">
+							<div class="uppercase font-black whitespace-nowrap reveal-from__element reveal-from--transparent">Twój uśmiech</div>
+							<div class="text--1400 font--special decoration-color reveal-from__element reveal-from--transparent-with-delay">moja pasja</div>
 						</h1>
 						';
 					}

@@ -107,7 +107,7 @@ $section_5_content_2 = $section_5['content_2'];
 			<blockquote class="p-4 quote">
 				<div class="blockquote-icons">
 					<div class="blockquote-background">
-						<p class="p-8 border-2 border-dashed border-white text-center text--800 text-black font-extrabold">
+						<p class="font--quote pt-12 pb-8 px-8 border-2 border-dashed border-white text-center text--800 text-black">
 							<span></span>
 							<span></span>
 							<?php echo $section_3_content  ?>

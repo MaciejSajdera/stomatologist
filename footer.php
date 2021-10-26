@@ -34,7 +34,7 @@
 
 		<div class="footer-bottom text-center text-xs pb-16">
 			<div class="site-info">
-				copyrights - Katarzyna Mazur | <?php echo date("Y"); ?>
+				copyrights - Katarzyna Senderowska | <?php echo date("Y"); ?>
 			</div><!-- .site-info -->
 		</div>
 

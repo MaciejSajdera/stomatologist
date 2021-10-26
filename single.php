@@ -22,14 +22,21 @@ get_header();
 
 				<div class="post-navigation">
 
-				<div>
-				<?php previous_post_link('%link', '<span class="post-navigation__prev">Poprzedni</span> <p>%title</p>'); ?>
-				</div>
+					<div>
+						<?php
+						$prev_post = get_adjacent_post(false, '', true);
+						if(!empty($prev_post)) {
+						echo '<a href="' . get_permalink($prev_post->ID) . '" title="' . $prev_post->post_title . '"><span class="post-navigation__prev">Poprzedni</span><p>' . mb_strimwidth( html_entity_decode($prev_post->post_title), 0, 60, '...' ) . '</p></a>'; }
+						?>
+					</div>
 
-				<div>
-
-				<?php next_post_link('%link', '<span class="post-navigation__next">Następny</span> <p>%title</p>'); ?>
-				</div>
+					<div>
+						<?php
+						$next_post = get_adjacent_post(false, '', false);
+						if(!empty($next_post)) {
+						echo '<a href="' . get_permalink($next_post->ID) . '" title="' . $next_post->post_title . '"><span class="post-navigation__next">Następny</span><p>' . mb_strimwidth( html_entity_decode($next_post->post_title), 0, 60, '...' ) . '</p></a>'; }
+						?>
+					</div>
 
 				</div>
 

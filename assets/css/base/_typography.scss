@@ -75,3 +75,44 @@ ins {
 big {
 	font-size: 125%;
 }
+
+.font {
+	&--quote {
+		font-family: $font__quote;
+	}
+	&--special {
+		font-family: $font__special;
+
+		@media screen and (min-width: 1024px) {
+			margin-top: -5px;
+		}
+	}
+}
+
+@font-face {
+	font-family: "Dulcelin";
+	src: url(../dist/fonts/Dulcelin.otf);
+	font-style: "cursive";
+}
+
+.text {
+	&--600 {
+		font-size: var(--fs-600);
+		line-height: 2rem;
+	}
+
+	&--800 {
+		font-size: var(--fs-800);
+		line-height: 2.25rem;
+	}
+
+	&--1200 {
+		font-size: var(--fs-1200);
+		line-height: 1;
+	}
+
+	&--1400 {
+		font-size: var(--fs-1400);
+		line-height: 1;
+	}
+}

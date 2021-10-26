@@ -133,8 +133,8 @@ add_action( 'widgets_init', 'mazurkatarzyna_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mazurkatarzyna_scripts() {
-	wp_enqueue_style( 'mazurkatarzyna-style', get_template_directory_uri() . '/dist/css/style.css' );
-	wp_enqueue_style( 'mazurkatarzyna-style-tailwind', get_template_directory_uri() . '/dist/css/tailwind.css' );
+	wp_enqueue_style( 'mazurkatarzyna-style', get_template_directory_uri() . '/dist/css/style.css', array(), '1.11');
+	wp_enqueue_style( 'mazurkatarzyna-style-tailwind', get_template_directory_uri() . '/dist/css/tailwind.css', array(), '1.11');
 
 	// Include our dynamic styles.
 	// $custom_css = mazurkatarzyna_dynamic_styles();
@@ -149,7 +149,7 @@ function mazurkatarzyna_scripts() {
 add_action( 'wp_enqueue_scripts', 'mazurkatarzyna_scripts' );
 
 function wpb_add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-font1', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap', false );
+	wp_enqueue_style( 'wpb-google-font1', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap', false );
 	wp_enqueue_style( 'wpb-google-font2', 'https://fonts.googleapis.com/css2?family=Yeseva+One:wght@400;600;800&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );

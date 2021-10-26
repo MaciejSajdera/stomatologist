@@ -111,6 +111,10 @@ section {
 		margin-bottom: 4rem;
 	}
 
+	.entry-meta {
+		color: $color__main-theme-decoration;
+	}
+
 	.post-thumbnail {
 		margin-bottom: 4rem;
 		margin: auto;
@@ -118,6 +122,18 @@ section {
 
 	.post-navigation {
 		margin: 4rem 0;
+		display: flex;
+		justify-content: space-between;
+
+		div {
+			&:first-of-type {
+				text-align: left;
+			}
+
+			&:nth-of-type(2) {
+				text-align: right;
+			}
+		}
 
 		span {
 			font-size: 0.75rem;

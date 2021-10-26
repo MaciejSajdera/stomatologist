@@ -23,17 +23,20 @@ $color__page-background-dark: #1e1e1e;
 $color__link: #bf943e; //royalblue
 $color__link-visited: #bf943e; //purple
 $color__main-theme-decoration: #bf943e;
-$color__main-theme-decoration--trans: #bf943eab;
+$color__main-theme-decoration--semitrans: #bf943eab;
+$color__main-theme-decoration--trans: #bf943e56;
 
 /* TYPOGRAPHY */
 // $font__main: "Montserrat";
-// $font__quote: "Yeseva One";
+$font__quote: "Yeseva One", "cursive";
+$font__special: "Dulcelin", "cursive";
 
 :root {
 	--fs-400: 1rem;
 	--fs-600: clamp(1.25rem, 1.5vw + 1rem, 2.25rem);
 	--fs-800: clamp(1.5rem, 1.75vw + 1rem, 2.25rem);
 	--fs-1200: clamp(2rem, 3vw + 1rem, 4.5rem);
+	--fs-1400: clamp(3rem, 4vw + 1rem, 5.5rem);
 }
 
 @media (min-width: 40em) {
