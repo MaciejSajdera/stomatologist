@@ -11,8 +11,6 @@
 
 ?>
 
-
-
 	<footer id="colophon" class="site-footer w-full">
 		<div class="footer-top flex items-center justify-between flex-col xl:flex-row pb-16">
 			<div class="footer-menu">

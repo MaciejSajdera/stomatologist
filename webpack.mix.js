@@ -67,6 +67,7 @@ mix.disableSuccessNotifications();
  */
 mix.options({
 	postCss: [require("postcss-preset-env")()],
+	postcssCustomProperties: [require("postcss-custom-properties")],
 	processCssUrls: false
 });
 
@@ -119,6 +120,7 @@ mix
 		postCss: [tailwindcss("./tailwind.config.js")]
 	})
 	.version();
+
 /*
  * Add custom Webpack configuration.
  *

@@ -133,8 +133,8 @@ add_action( 'widgets_init', 'mazurkatarzyna_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mazurkatarzyna_scripts() {
-	wp_enqueue_style( 'mazurkatarzyna-style', get_template_directory_uri() . '/dist/css/style.css', array(), '1.11');
-	wp_enqueue_style( 'mazurkatarzyna-style-tailwind', get_template_directory_uri() . '/dist/css/tailwind.css', array(), '1.11');
+	wp_enqueue_style( 'mazurkatarzyna-style', get_template_directory_uri() . '/dist/css/style.css', array(), '1.12');
+	wp_enqueue_style( 'mazurkatarzyna-style-tailwind', get_template_directory_uri() . '/dist/css/tailwind.css', array(), '1.12');
 
 	// Include our dynamic styles.
 	// $custom_css = mazurkatarzyna_dynamic_styles();
